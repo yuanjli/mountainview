@@ -21,7 +21,15 @@ class Header extends Component {
     }
 
     handleScroll = () => {
-        console.log(' User scrolling')
+        if(window.scrollY > 0){
+            this.setState({
+                headerShow: true
+            })
+        }else {
+            this.setState({
+                headerShow: false
+            })
+        }
     }
 
     toggleDrawer = (value) => {
