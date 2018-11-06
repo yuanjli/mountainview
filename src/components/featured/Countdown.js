@@ -4,12 +4,30 @@ import Slide from 'react-reveal/Slide';
 class Countdown extends Component {
 
     state = {
+        deadline: 'Dec, 16, 2018',
+        days: '0',
+        hours: '0',
+        minutes: '0',
+        seconds: '0'
+    }
 
+    getTimeUntil(deadline){
+        const time = Date.parse(deadline) - Date.parse(new Date());
+        if(time < 0) {
+            console.log('Date passed')
+        } else {
+            const seconds = Math.floor((time/1000)%60);
+        }
+        //console.log(time);
+    }
+
+    componentDidMount(){
+        setInterval(()=> this.getTimeUntil(this.state.deadline),1000)
     }
 
     render() {
         return (
-            <Slide left>
+            <Slide left delay={1000}>
                 <div className="countdown_wrapper">
                     <div className="countdown_top">
                         event starts in
