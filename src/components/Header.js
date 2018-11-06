@@ -14,9 +14,9 @@ class Header extends Component {
         drawerOpen: false
     }
 
-    toggleDrawer = () => {
+    toggleDrawer = (value) => {
         this.setState({
-            drawerOpen: false
+            drawerOpen: value
         })
     }
     
@@ -40,7 +40,7 @@ class Header extends Component {
                     <IconButton
                          aria-label="Menu"
                          color="inherit"
-                         onClick={() => this.toggleDrawer('top', true)}
+                         onClick={() => this.toggleDrawer(true)}
                     >
                         <MenuIcon></MenuIcon>
                     </IconButton>
