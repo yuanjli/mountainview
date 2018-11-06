@@ -14,10 +14,21 @@ const UpDrawer = (props) => {
         >
             <List component="nav">
                 <ListItem button onClick={()=> console.log('feature')}>
-
-                    </ListItem>    
+                    Events 
+                </ListItem>
+                <ListItem button onClick={()=> console.log('info')}>
+                    Park Info 
+                </ListItem>
+                <ListItem button onClick={()=> console.log('Highlights')}>
+                    Highlights  
+                </ListItem>
+                <ListItem button onClick={()=> console.log('Pricing')}>
+                    Pricing 
+                </ListItem>
+                <ListItem button onClick={()=> console.log('Location')}>
+                    Location 
+                </ListItem>     
             </List>
-            Drawer
         </Drawer>
 
     );
